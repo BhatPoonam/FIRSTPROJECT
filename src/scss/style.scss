@@ -1,0 +1,355 @@
+:root{--body-color: #F0F0F6;
+    --primary-color: #fa7509f8;
+}
+body{
+    background-color: var(--body-color);
+}
+.banner{
+    background-color: white;
+    padding: 30px 50px 0px;    
+    h1{
+        span{
+            color: var(--primary-color);
+        }
+    }
+    .icon-Hire-me-1{
+        font-size: 48px;
+    }
+}
+.services{
+    padding-top: 60px;
+    .services__box{
+        padding: 20px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span{
+            font-size: 55px;
+            color: var(--primary-color);
+
+        }
+        .services__title{
+            font-size: 1.2rem;
+            font-weight: bold;    
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        
+    }
+    
+}
+.pricePlans{
+    padding-top: 60px;
+    .pricePlans__box{
+        padding-bottom: 30px;
+        .topTitle{   
+            visibility: hidden;
+        }   
+        .popular {
+        
+            background-color: var(--primary-color);
+            padding:10px; 
+            width: 100%;
+        }
+    }     
+    .pricePlans__title{
+        .type{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .price{
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+        
+    }
+    ul{
+        list-style: none;
+        
+        li{
+            text-align: left;
+            margin-right: 20px;
+            
+            .icon-Check{
+                color: var(--primary-color);
+                margin-right: 20px;   
+            }
+            .icon-Close{
+                color: black;
+                margin-right: 20px;   
+            }
+        }
+    }
+    .icon-Order-now{
+        box-shadow: -1px 1px 4px rgba(0,0,0,0.2);
+        
+    }
+    button{
+        background-color:var(--primary-color);
+        border: none;
+        outline: none;
+        padding: 10px 50px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .icon-Order-now {
+        font-size: 60px;
+}
+}
+.recommendation{
+    padding-top: 60px;
+    .title{
+        font-weight: bold;    
+    }
+    .icon-Star{
+        color: var(--primary-color);
+        margin: 0 3px;
+    }
+    .name{
+        font-weight: bold;
+    }
+}
+.education, .workHistory, .portfolio, .blog, .contact, .map, .logo{
+    padding-top: 60px;
+}
+
+.portfolio{
+    ul{
+        list-style: none;
+        li{
+            margin: 10px 20px;
+            a{
+                text-decoration: none;
+                color: #000;
+                &:hover{
+                    color: var(--primary-color);
+                    cursor: pointer;
+                    transition: all ease-in-out 0.3s;
+                }
+            }
+            .active{
+                color: var(--primary-color);
+            }
+        }
+    }
+    .portfolio__box{
+        position: relative;
+        &:hover{
+            cursor: pointer;
+            .overlay{
+                opacity: 0.8;
+            }
+        }
+        figure{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .overlay{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            background-color: var(--primary-color);
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all ease-in-out .3s;
+              p{
+                  font-size: 3.5rem;
+                  font-weight: bold;
+
+              }
+        }
+    }
+}
+.blog{
+    .blog__box{
+        img{
+            width: 100%;
+
+        }
+        .blog__box--details{
+            padding: 10px 20px;
+            .title{
+                font-weight: bold;
+                margin-top: 20px;
+            }
+            .icon-Learn-more{
+                font-size: 20px;
+            }
+        }
+        
+    }
+}
+.contact{
+    form{
+        margin-top: 10px;
+        .form-group{
+            padding: 10px 20px;
+            textarea{
+                resize:none;
+            }
+            .icon-Send-Message{
+                font-size: 33px;
+            }
+        }
+        
+    }
+    .info{
+        .box{
+            // height: 188px;
+            // width: 390px; 
+            margin-bottom: 10px; 
+            padding: 15px; 
+            .icon{ 
+                display: flex;
+                justify-content: center;
+                margin: 10px 0 25px;   
+                span{
+                    font-size: 25px;
+                    border-radius: 50%;
+                    background-color: var(--primary-color);
+                    padding: 10px;
+                }
+            }
+            .list{
+                
+                li{
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+    
+}
+.map{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    padding-top: 20px;
+}
+@media screen and(max-width:768px) {
+    .banner{
+        padding-bottom: 20px;
+        .banner-left{
+            span{
+                font-size: 2.5rem;
+            }
+        }
+        .banner-right{
+            img{
+                width: auto;
+                height: 350px;
+            }
+        }
+    }
+    .services{
+        .services__box{
+            font-size: calc(100% - 20%);
+        }
+    }
+    .pricePlans{
+        .pricePlans__box{
+            ul{
+                li{
+
+                    font-size: calc(100% - 10%);
+                }
+            }
+            .btn-Order-now{
+                font-size: .9rem;
+            }
+            .icon-Order-now{
+                font-size: 3rem;
+            }
+            font-size: calc(100% - 10%);
+        }
+    }
+    .recommendation{
+        .profile{
+            img{
+                height: 60px;
+            }
+        }
+    }
+    .education,.workHistory{
+        .education__box{
+            .date{
+                display: block;
+                margin-left: -20px;
+            }
+        }
+    }
+    .contact{
+       .box{
+           .list{
+                  li{
+                      font-size: .8rem;
+                  } 
+           }
+       } 
+    }
+    
+}
+@media screen and (max-width:567px){
+    .banner{
+        .banner-right{
+            display: none;
+        }
+    }
+    .portfolio{
+        ul{
+            li{
+                font-size: .7rem;
+            }
+        }
+    }
+    .education,.workHistory{
+        .education__box{
+            .date{
+                display: inline-block;
+            }
+        }
+    }
+    .contact{
+        .info{
+            .box{
+                .list{
+                    display: inline-flex;
+                    flex-flow: row nowrap;
+                    .info{
+                        margin-left: -25px;
+                    }
+                }
+            }
+        }
+
+    }
+    .logo{
+        img{
+            width: 60px;
+        }
+    }
+}
